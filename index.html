@@ -1,20 +1,15 @@
-<!--
-Build a form that accepts a loan application. It must have the following fields. See gitHub for directions.
-
--->
-
 <!DOCTYPE html>
 
 <html lang="en">
     <head>
-        <title>Banking Form</title>
         <meta charset="utf-8">
+        <title>Loan Application</title>
     </head>
-
     <body>
-        <header><h1>Loan Application</h1></header>
-        <main>
-        <form><section><h2> Applicant Information</h2>
+        <form action = "index.html" method = "post">
+        <h1>Loan Application</h1>
+            <fieldset>
+            <legend>Applicant Information</legend>
         	First Name:
         	<input type="text"><br>
         	Middle Initial:
@@ -29,37 +24,48 @@ Build a form that accepts a loan application. It must have the following fields.
         	<input type="text"><br>
         	Employer Address:
         	<input type="text"><br>
-            </section>
-        	Type of Loan:<br>
-        	<input type="radio">Commercial<br>
-        	<input type="radio">Real Estate<br>
-        	<input type="radio">Personal<br>
-        	<input type="radio">Mortgage<br>
+            </fieldset>
+
+        	<fieldset><legend>Loan Details</legend>
+            Type of Loan:<br>
+            <select>
+            <option value="commercial">Commercial</option>
+            <option value="realestate">Real Estate</option>
+            <option value="personal">Personal</option>
+            <option value="mortgage">Mortgage</option>
+            </select><br>
         	Requested Amount:
-        	<input type="text"><br>
+        	<input type="number"><br>
         	Loan Length:<br>
         	<input type="radio">5 years<br>
         	<input type="radio">15 years<br>
         	<input type="radio">30 years<br>
-        	Special Conditions:<br>
+            </fieldset>
+
+        	<fieldset><legend>Special Conditions</legend>
+            Please check all that apply:<br>
         	<input type="checkbox">I have a down payment. <br>
         	<input type="checkbox">Out-of-state resident <br>
         	<input type="checkbox">Married <br>
         	<input type="checkbox">Loan will be co-signed. <br>
-        	Additional Comments:
-        	<textarea> Enter additional comments here. </textarea>
+        	</fieldset>
+            <fieldset><legend>Additional Comments</legend>
+        	<textarea rows="5" cols="30">Enter any additional comments here. </textarea>
         	<br>
-        	Applicant Email Address:
+            </fieldset>
+
+            <fieldset><legend>Applicant Contact Info</legend>
+        	Email Address:
         	<input type="email"><br>
-        	Applicant Telephone Number:
+        	Telephone Number:
         	<input type="Telephone"><br>
-        	Applicant LinkedIn URL:
-        	<input type="text"<br>
-        	<p><input type="submit"></p>
+        	LinkedIn profile URL:
+        	<input type="text"><br>
+            </fieldset>
+
+            <fieldset>
+        	<button type="submit">Submit Application</button>
+            </fieldset>
         </form>
-
-
-     	</main>
-
     </body>
 </html>
